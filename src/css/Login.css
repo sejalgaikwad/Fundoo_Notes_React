@@ -1,0 +1,27 @@
+.formStep{
+    margin: 150px auto;
+    /* margin-top: 100px; 
+    margin-left: 550px; 
+    margin-bottom: 100px; */
+    width: 500px;
+    height: 400px;
+    /* height: 70%; */
+    /* padding: 12px 20px ;  */
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;   
+    text-align: center;
+}
+
+/* .input{
+} */
+
+
+/* .header1{
+    text-align: center;
+    margin-bottom: 50px;
+} */

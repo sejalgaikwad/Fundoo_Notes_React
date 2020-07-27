@@ -1,0 +1,47 @@
+.f {
+  color: blue;
+  }
+  .u {
+  color: red;
+  }
+  .n {
+  color: yellow;
+  }
+  .d {
+  color: blue;
+  }
+  .o {
+  color: green;
+  }
+  .oo {
+  color: red;
+  }
+  
+  .title{
+    margin-bottom: 1px;
+  }
+  .subtitle1{
+    margin-bottom: 8px;
+  }
+  .subtitle2{
+    margin-bottom: 30px;
+  }
+
+.btn1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.forgot-btn{
+  margin-top: 5px;
+  text-align: left;
+}
+
+.input{
+  width: 100%;
+}
+.inputText5{
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
