@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import image from "../assets/account.svg";
 import "../css/Register.css";
+import { register } from "../services/UserServices";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 
 class Register extends Component {
@@ -27,10 +28,41 @@ class Register extends Component {
         formData[event.target.name] = event.target.value;
         this.setState({ formData });
     };
-    handleSubmit = e => {
+
+      handleSubmit = event => {
+        // alert( JSON.stringify(this.state));
         console.log(JSON.stringify(this.state));
-        e.preventDefault();
-    };
+        event.preventDefault();
+    
+        let userInput = {
+          email: this.state.formData.email,
+          firstName: this.state.formData.firstName,
+          lastName: this.state.formData.lastName,
+          password: this.state.formData.password
+        };
+    
+        // event.target.reset();
+        // this.setState({
+        //     firstName: '',
+        //     lastName: ''
+        // })
+    
+        register(userInput)
+          .then(response => {
+            alert("register sussefully");
+            console.log("register", response.data);
+
+            this.setState({
+              firstName: "",
+              lastName: ""
+            });
+          })
+          .catch(errorMessages => {
+            alert("User already exist");
+            console.log("error", errorMessages);
+          });
+        // }
+      };
 
     render() {
         const { formData, submitted } = this.state;
