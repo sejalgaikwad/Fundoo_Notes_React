@@ -6,3 +6,6 @@ export function register(userInput){
     return axios.post( url+ `/register`,userInput )
 }
 
+export function login(userInput){
+    return axios.post( url+ `/login`,userInput )
+}
